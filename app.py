@@ -7,5 +7,5 @@ def hello():
 
 
 @app.route("/main")
-def hello():
+def main():
     return "Main Page"

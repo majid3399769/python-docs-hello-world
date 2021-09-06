@@ -35,7 +35,3 @@ dash_app.layout = html.Div(children=[
 def my_dash_app():
     return dash_app.index()
 
-@app.route("/")
-def index():
-    return "Welcome to flask "
-

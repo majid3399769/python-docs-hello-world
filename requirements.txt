@@ -1,3 +1,5 @@
 Flask>=1.0,<=1.1.2
-dash==1.13.3
-pandas
+dash==0.30.0
+dash-html-components==0.13.2
+dash-core-components==0.38.0
+dash-table==3.1.7

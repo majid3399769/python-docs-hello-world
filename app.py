@@ -7,7 +7,7 @@ app = Flask(__name__)
 dash_app = Dash(
     __name__,
     server=app,
-    url_base_pathname='/dash'
+    url_base_pathname='/dash/'
 )
 
 dash_app.layout = html.Div(children=[
@@ -31,7 +31,7 @@ dash_app.layout = html.Div(children=[
     )
 ])
 
-@app.route("/dash/")
+@app.route("/dash")
 def my_dash_app():
     return dash_app.index()
 

@@ -1,7 +1,7 @@
 from flask import Flask
 from dash import Dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from  dash import  html
 
 app = Flask(__name__)
 dash_app = Dash(
@@ -34,4 +34,6 @@ dash_app.layout = html.Div(children=[
 @app.route("/dash")
 def my_dash_app():
     return dash_app.index()
+
+
 

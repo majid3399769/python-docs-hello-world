@@ -1,9 +1,14 @@
-import dash
+from flask import Flask
+from dash import Dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-dash_app = dash.Dash()
-app = dash_app.server
+app = Flask(__name__)
+dash_app = dash.Dash(
+    __name__,
+    server=app,
+    url_base_pathname='/dash'
+)
 
 dash_app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
@@ -25,3 +30,12 @@ dash_app.layout = html.Div(children=[
         }
     )
 ])
+
+@app.route("/dash")
+def my_dash_app():
+    return dash_app.index()
+
+@app.route("/")
+def index():
+    return "Welcome to flask "
+

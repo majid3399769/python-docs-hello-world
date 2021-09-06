@@ -25,5 +25,3 @@ dash_app.layout = html.Div(children=[
         }
     )
 ])
-
-app

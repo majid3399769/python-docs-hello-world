@@ -25,3 +25,5 @@ app.layout = html.Div(children=[
         }
     )
 ])
+
+application

@@ -31,7 +31,7 @@ dash_app.layout = html.Div(children=[
     )
 ])
 
-@app.route("/dash")
+@app.route("/dash/")
 def my_dash_app():
     return dash_app.index()
 

@@ -2,14 +2,14 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-app = dash.Dash()
-application = app.server
+dash_app = dash.Dash()
+app = dash_app.server
 
-app.layout = html.Div(children=[
+dash_app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
 
     html.Div(children='''
-        This is Dash running on Azure App Service.
+        This is Dash running on Azure App Service without a Docker container.
     '''),
 
     dcc.Graph(
@@ -26,4 +26,5 @@ app.layout = html.Div(children=[
     )
 ])
 
-application
+if __name__ == '__main__':
+    dash_app.run_server(debug=True)

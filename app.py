@@ -4,7 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 app = Flask(__name__)
-dash_app = dash.Dash(
+dash_app = Dash(
     __name__,
     server=app,
     url_base_pathname='/dash'

@@ -43,7 +43,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 
 app = Flask(__name__)
-dash_app = Dash(
+dash_app = dash.Dash(
     __name__,
     server=app,
     url_base_pathname='/dash/'

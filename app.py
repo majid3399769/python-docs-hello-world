@@ -161,7 +161,7 @@ def update_graph(option_slctd, affected_by):
 
     return container, fig
 
-@app.route("/")
+@app.route("/dash")
 def my_dash_app():
     return dash_app.index()
 

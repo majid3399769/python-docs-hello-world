@@ -65,7 +65,7 @@ print(df["Affected by"].unique())
 # App layout
 dash_app.layout = html.Div(
     [
-        html.H1("Dash Web Application Demo 1", style={"text-align": "center"}),
+        html.H1("Dash Web Application Demo", style={"text-align": "center"}),
         html.H4(children="Year"),
         dcc.Dropdown(
             id="slct_year",
@@ -161,7 +161,7 @@ def update_graph(option_slctd, affected_by):
 
     return container, fig
 
-@app.route("/dash")
+@app.route("/")
 def my_dash_app():
     return dash_app.index()
 
